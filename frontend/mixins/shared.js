@@ -6,34 +6,6 @@ import { Base64 } from 'js-base64'
 import _ from 'lodash'
 
 import english from '../translations/english'
-import spanish from '../translations/spanish'
-import german from '../translations/german'
-import indonesian from '../translations/indonesian'
-import turkish from '../translations/turkish'
-import lithuanian from '../translations/lithuanian'
-import portuguese from '../translations/portuguese'
-import dutch from '../translations/dutch'
-import chinese from '../translations/chinese'
-import bulgarian from '../translations/bulgarian'
-import serbian from '../translations/serbian'
-import french from '../translations/french'
-import slovak from '../translations/slovak'
-import polish from '../translations/polish'
-import italian from '../translations/italian'
-import korean from '../translations/korean'
-import czech from '../translations/czech'
-import galician from '../translations/galician'
-import russian from '../translations/russian'
-import hungarian from '../translations/hungarian'
-import swedish from '../translations/swedish'
-import japanese from '../translations/japanese'
-import slovenian from '../translations/slovenian'
-import hebrew from '../translations/hebrew'
-import romanian from '../translations/romanian'
-import arabic from '../translations/arabic'
-import portuguese_br from '../translations/portuguese_br'
-import persian from '../translations/persian'
-import estonian from '../translations/estonian'
 
 const funcs = {
   methods: {
@@ -48,34 +20,6 @@ const funcs = {
 
       let available_languages = {
         'english': english,
-        'spanish': spanish,
-        'german': german,
-        'indonesian': indonesian,
-        'turkish': turkish,
-        'lithuanian': lithuanian,
-        'portuguese': portuguese,
-        'dutch': dutch,
-        'chinese': chinese,
-        'bulgarian': bulgarian,
-        'serbian': serbian,
-        'french': french,
-        'slovak': slovak,
-        'polish': polish,
-        'italian': italian,
-        'korean': korean,
-        'czech': czech,
-        'galician': galician,
-        'russian': russian,
-        'hungarian': hungarian,
-        'swedish': swedish,
-        'japanese': japanese,
-        'slovenian': slovenian,
-        'hebrew': hebrew,
-        'romanian': romanian,
-        'arabic': arabic,
-        'portuguese_br': portuguese_br,
-        'persian': persian,
-        'estonian': estonian,
       }
 
       let language = store.state.config.language

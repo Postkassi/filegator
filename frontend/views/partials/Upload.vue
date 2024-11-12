@@ -77,7 +77,17 @@ export default {
   watch: {
     'files' (files) {
       _.forEach(files, file => {
-        this.resumable.addFile(file)
+        // Check if the file is a PDF before adding it
+        if (file.type === 'application/pdf') {
+          this.resumable.addFile(file)
+        } else {
+          this.$notification.open({
+            message: this.lang('Only PDF files are allowed.'),
+            type: 'is-danger',
+            queue: false,
+            indefinite: true,
+          })
+        }
       })
     },
   },
@@ -115,6 +125,17 @@ export default {
     this.resumable.on('fileAdded', (file) => {
       this.visible = true
       this.progressVisible = true
+
+      // Check if the file is a PDF
+      if (file.file.type !== 'application/pdf') {
+        this.$notification.open({
+          message: this.lang('Only PDF files are allowed.'),
+          type: 'is-danger',
+          queue: false,
+          indefinite: true,
+        })
+        return
+      }
 
       if(file.relativePath === undefined || file.relativePath === null || file.relativePath == file.fileName) file.relativePath = this.$store.state.cwd.location
       else file.relativePath = [this.$store.state.cwd.location, file.relativePath].join('/').replace('//', '/').replace(file.fileName, '').replace(/\/$/, '')
@@ -177,6 +198,7 @@ export default {
     },
   },
 }
+
 </script>
 
 <style scoped>
