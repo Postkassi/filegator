@@ -19,7 +19,9 @@ RUN cp configuration_sample.php configuration.php
 RUN composer install
 RUN composer require league/flysystem-sftp:^1.0 -W
 RUN composer require league/flysystem-aws-s3-v3:^1.0 -W
+COPY package.json /var/www/filegator/
 RUN npm install
+COPY . /var/www/filegator/
 RUN npm run build
 RUN vendor/bin/phpunit
 RUN npm run lint

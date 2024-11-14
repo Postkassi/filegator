@@ -24,7 +24,7 @@ const data = {
   'Time': 'Aeg',
   'Name': 'Nimi',
   'Size': 'Suurus',
-  'Home': 'Avaleht',
+  'Home': 'Avaleht',      
   'Copy': 'Kopeeri',
   'Move': 'Lõika',
   'Rename': 'Muuda',
