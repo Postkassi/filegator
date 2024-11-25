@@ -34,7 +34,7 @@ header.navbar {
 }
 .navbar .navbar-brand {
     font-size: 28px;
-    height: auto;
+    max-height: 100px;
     line-height: 50px;
     margin-left: 20px;
     color: #34b891;
