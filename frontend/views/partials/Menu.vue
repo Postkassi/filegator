@@ -93,6 +93,7 @@ export default {
   }
   .logo img {
     max-height: 3rem;
+    max-width: 100%; /* Ensure the image scales properly */
   }
 }
 @media all and (min-width: 1088px) {
@@ -104,6 +105,8 @@ export default {
   }
   .logo img {
     max-height: 2.5rem;
+    max-width: 100%; /* Ensure the image scales properly */
   }
 }
 </style>
+
